@@ -17,6 +17,7 @@
   "devDependencies": {
     "@tsconfig/node20": "^20.1.4",
     "@types/node": "^20.12.5",
+    "@types/vue": "^2.0.0",
     "@vitejs/plugin-vue": "^5.0.4",
     "@vue/tsconfig": "^0.5.1",
     "npm-run-all2": "^6.1.2",
@@ -25,4 +26,3 @@
     "vue-tsc": "^2.0.11"
   }
 }
-
