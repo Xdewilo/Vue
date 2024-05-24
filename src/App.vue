@@ -1,9 +1,12 @@
 <template>
-  <EjemploComponents/>
+  <condicionalesComponents/>
+  <bucleFor/>
 </template>
 
 <script lang="ts" setup>
-import EjemploComponents from './components/EjemploComponents.vue'
+import condicionalesComponents from './components/condicionalesComponents.vue'
+import bucleFor from './components/bucleFor.vue'
+impor
 </script>
 
 <style scoped>
