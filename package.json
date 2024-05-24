@@ -7,7 +7,9 @@
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "build-only": "vite build",
-    "type-check": "vue-tsc --build --force"
+    "type-check": "vue-tsc --build --force",
+    "serve": "vite",
+    "dev": "vite"
   },
   "dependencies": {
     "vue": "^3.4.21"
