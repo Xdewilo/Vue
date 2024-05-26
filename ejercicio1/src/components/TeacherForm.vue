@@ -3,7 +3,7 @@
         <div><label>Nombre:</label> <input type="text" v-model="teacher.teacherName"></div>
         <div><label>Apellido:</label> <input type="text" v-model="teacher.teacherLastName"></div>
         <div><label>DNI:</label> <input type="text" v-model="teacher.dni"></div>
-        <div><label>Materias:</label> <input type="text" v-model="subject"><button @click="handleSubject()" >Agregar</button></div>
+        <div><label>Materias:</label> <input type="text" v-model="subject"><button @click="handleSubject()"> Agregar</button></div>
         <div>
             <ul>
                 <li v-for="(materia , index) in teacher.subjects" :key="index">{{ materia }}</li>
@@ -57,13 +57,14 @@ interface ITeacher {
     teacherName: string,
     teacherLastName: string,
     dni: string,
-    subjects: [],
+    subjects: string[],
     doc: boolean
 }
 
 let teacher: Ref<ITeacher> = ref({
     teacherName: "",
     teacherLastName: "",
+    dni: "",
     subjects: [],
     doc: false
 })
