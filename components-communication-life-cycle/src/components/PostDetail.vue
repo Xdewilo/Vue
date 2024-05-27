@@ -6,13 +6,14 @@
         <h3>{{ titulo }}</h3>
         <!-- Contenido del post -->
         <p>{{ contenido }}</p>
+        <!-- Botón que dispara el método handlerClick al hacer clic -->
+        <button @click="handlerClick">Di Hola</button>
     </div>
 </template>
 
 <script lang="ts">
 /* Importación de defineComponent desde Vue */
 import { defineComponent } from 'vue';
-
 
 export default defineComponent({
     name: 'PostDetail',
@@ -30,6 +31,16 @@ export default defineComponent({
             default: 'no tiene contenido',
         },
     },
+    /* Declaración del evento emitido */
+    emits: ['sayHi'],
+    /* Definición del setup */
+    setup(props, { emit }) {
+        /* Método handlerClick que emite el evento sayHi */
+        const handlerClick = () => {
+            emit('sayHi', "Hola");
+        };
+        return { props, handlerClick };
+    }
 });
 </script>
 
@@ -37,7 +48,7 @@ export default defineComponent({
 /* Estilo para la tarjeta */
 .card {
     width: 500px;
-    height: 100px;
+    height: 150px;
     background-color: blue;
     color: antiquewhite;
     border-radius: 20px;
@@ -45,3 +56,7 @@ export default defineComponent({
     padding: 10px;
 }
 </style>
+
+
+
+
