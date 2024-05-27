@@ -7,13 +7,14 @@
         <!-- Contenido del post -->
         <p>{{ contenido }}</p>
         <!-- Botón que dispara el método handlerClick al hacer clic -->
+        <input type="text" v-model="mensaje">
         <button @click="handlerClick">Di Hola</button>
     </div>
 </template>
 
 <script lang="ts">
 /* Importación de defineComponent desde Vue */
-import { defineComponent } from 'vue';
+import { defineComponent,Ref,ref} from 'vue';
 
 export default defineComponent({
     name: 'PostDetail',
@@ -37,9 +38,10 @@ export default defineComponent({
     setup(props, { emit }) {
         /* Método handlerClick que emite el evento sayHi */
         const handlerClick = () => {
-            emit('sayHi', "Hola");
+            emit('sayHi', mensaje.value);
         };
-        return { props, handlerClick };
+        let mensaje : Ref<string> = ref('')
+        return { props, handlerClick, mensaje };
     }
 });
 </script>
