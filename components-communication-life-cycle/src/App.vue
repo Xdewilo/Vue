@@ -1,27 +1,28 @@
+<!-- ParentComponent.vue -->
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <!-- Contenedor principal que contiene tres componentes secundarios -->
+  <div class="container">
+    <!-- Componente CycleOpcion -->
+    <CycleOpcion />
+    <!-- Componente CycleComposition -->
+    <CycleComposition />
+    <!-- Componente PostList -->
+    <PostList />
+  </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
-
-export default defineComponent({
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-});
+<script lang="ts" setup>
+/* Importación de componentes secundarios */
+import CycleOpcion from './components/CycleOpcion.vue'
+import CycleComposition from './components/CycleComposition.vue'
+import PostList from './components/PostList.vue'
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scoped>
+/* Estilo para el contenedor principal */
+.container {
+  background-color: black;
+  display: grid;
+  justify-content: center;
 }
 </style>
