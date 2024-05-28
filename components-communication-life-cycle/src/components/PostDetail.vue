@@ -3,9 +3,9 @@
     <!-- Contenedor de la tarjeta que muestra los detalles del post -->
     <div class="card">
         <!-- Título del post -->
-        <h3>{{ titulo }}</h3>
+        <h3>{{ props.titulo }}</h3>
         <!-- Contenido del post -->
-        <p>{{ contenido }}</p>
+        <p>{{ props.contenido }}</p>
         <!-- Botón que dispara el método handlerClick al hacer clic -->
         <input type="text" v-model="mensaje">
         <button @click="handlerClick">Di Hola</button>
