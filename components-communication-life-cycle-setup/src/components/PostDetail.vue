@@ -8,17 +8,23 @@
     </div>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import {defineEmits , defineProps, Ref, ref } from 'vue';
 
     const props = defineProps({
         title: String,
         content : String
     })
+
+    const emit = defineEmits(['sayHi'])
+
     const handlerClick = () => {
         emit('sayHi', mensaje.value);
     };
+
     let mensaje: Ref<string> = ref('')
+
+
 </script>
 
 <style scoped>
