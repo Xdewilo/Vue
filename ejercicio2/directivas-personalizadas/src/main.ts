@@ -7,7 +7,7 @@ const app = createApp(App)
 
 // Directiva 'font-size' que establece un tamaño de fuente fijo de 71px
 app.directive('font-size', {
-    beforeMount: (el, binding) => {
+    beforeMount: (el) => {
         // Asigna el tamaño de fuente de 71px al elemento
         el.style.fontSize = "71px"
     }
