@@ -8,20 +8,20 @@
     </ul>
 </template>
 
-<script lang="ts">
+<script lang="ts" >
 import PostService from '@/services/PostService'
 import { defineComponent, onMounted} from 'vue'
 
 export default defineComponent({
-    name: 'PostCompositionAPI',
-    setup() {
+    name: 'OptionAPI',
+    data() {
         const service = new PostService()
         const posts = service.getPosts()
-
-        onMounted(async () => {
-            await service.fetchAll()
-        });
-        return { posts }
+        return { posts, service }
+    },
+    async mounted() {
+        await this.service.fetchAll()
+    
     }
    
 })

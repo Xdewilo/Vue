@@ -1,25 +1,27 @@
-import { ref } from 'vue'
+import { ref,Ref } from 'vue'
+import IPost from '@/Interface/IPost';
 
 class PostService {
 
-    private posts
+    private posts : Ref<Array<IPost>>
 
     constructor() {
-        this.posts = ref([])
+        this.posts = ref<Array<IPost>>([])
     }
-
-    async fetchAll() {
+    getPosts ():Ref <Array<IPost>> {
+        return this.posts
+    }
+    async fetchAll(): Promise<void> {
         try {
             const URL = 'https://jsonplaceholder.typicode.com/posts'
-            const response = (await fetch(URL)).json()
-            this.posts.value = await response
+            const response = await fetch(URL)
+            const json = await response.json()
+            this.posts.value =  await json
         } catch (error) {
             console.error(error)
         }
     }
-    getPosts() {
-        return this.posts
-    }
+   
 }
 export default PostService
 
