@@ -20,4 +20,6 @@ onMounted(async () => {
 });
 </script>
 
-<style scope></style>
+<style scope>
+
+</style>

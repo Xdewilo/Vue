@@ -1,11 +1,13 @@
 <template>
   <div id="app">
-    <PostCompositionAPI/>
+    <OptionAPI/>
   </div>
 </template>
 
 <script lang="ts" setup>
 import PostCompositionAPI from './components/PostCompositionAPI.vue';
+import OptionAPI from './components/OptionAPI.vue';
+import CompositionSetup from './components/CompositionSetup.vue';
 </script>
 
 <style>
