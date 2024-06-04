@@ -7,6 +7,7 @@
       <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
     </p>
     <h3>Installed CLI Plugins</h3>
+    <button class="btn btn-primary ">Hola cabro</button>
     <ul>
       <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
       <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-typescript" target="_blank" rel="noopener">typescript</a></li>
@@ -53,12 +54,15 @@ ul {
   list-style-type: none;
   padding: 0;
   color: $rojo;
-}
-li {
+
+  li {
   display: inline-block;
   margin: 0 10px;
   color: $rojo;
+  }
 }
+
+
 a {
   color: $rojo;
 }
