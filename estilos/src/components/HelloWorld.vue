@@ -44,18 +44,22 @@ export default defineComponent({
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+
 h3 {
   margin: 40px 0 0;
+  color: $rojo;
 }
 ul {
   list-style-type: none;
   padding: 0;
+  color: $rojo;
 }
 li {
   display: inline-block;
   margin: 0 10px;
+  color: $rojo;
 }
 a {
-  color: #42b983;
+  color: $rojo;
 }
 </style>
