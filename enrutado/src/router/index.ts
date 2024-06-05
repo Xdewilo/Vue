@@ -5,6 +5,7 @@ import ServicesView from '@/views/ServicesView.vue'
 import ContactView from '@/views/ContactView.vue'
 import BlogView from '@/views/BlogView.vue'
 import PostView from '@/views/PostView.vue'
+
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
@@ -32,7 +33,7 @@ const routes: Array<RouteRecordRaw> = [
     component: BlogView
   },
   {
-    path : 'post/:id',
+    path : '/blog/:id',
     name : 'post',
     component :PostView
   }
