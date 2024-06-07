@@ -21,5 +21,31 @@ onMounted(async () => {
 </script>
 
 <style scope>
+   .post-list {
+        list-style: none;
+        padding: 0;
+        width: 50%;
+    }
 
+    .post-list li {
+        margin-bottom: 20px;
+        padding: 10px;
+        background-color: #f2f2f2;
+        border-radius: 5px;
+    }
+
+    .post-list li h2 {
+        color: #333;
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    .post-list li p {
+        color: #666;
+        font-size: 14px;
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+    }
 </style>
