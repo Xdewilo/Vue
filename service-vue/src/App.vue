@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <OptionAPI/>
+    <CompositionSetup/>
   </div>
 </template>
 

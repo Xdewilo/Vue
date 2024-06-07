@@ -1,11 +1,13 @@
 <template>
   <h1>Listado de Post</h1>
+  <div class="container">
   <ul class="post-list">
     <li v-for="post in posts" :key="post.id">
       <h2>{{ post.title }}</h2>
       <p>{{ post.body }}</p>
     </li>
   </ul>
+  </div>
 </template>
 
 <script lang="ts" setup>
