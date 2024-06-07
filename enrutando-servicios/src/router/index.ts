@@ -5,11 +5,6 @@ const routes: Array<RouteRecordRaw> = [
     path: '/',
     redirect: to => { return { name: 'PostList' } }
   },
-  {
-    path: '/about',
-    name: 'about',
-    
-  }
 ]
 
 const router = createRouter({
