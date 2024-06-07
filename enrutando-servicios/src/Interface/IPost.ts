@@ -1,7 +1,9 @@
-interface IPost{
-    userId?: number,
-    id: number,
-    title: string,
-    body: string
-}
-export default IPost
+interface IPost {
+    userId?: number;
+    id: number;
+    title: string;
+    body: string;
+  }
+  
+  export default IPost;
+  
