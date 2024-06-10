@@ -21,3 +21,8 @@
   const password = ref('')
 
 </script>
+
+https://hfp69ilv.directus.app/auth/login
+
+email. testuser@jeremy.net
+password: 12345678
