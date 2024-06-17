@@ -1,7 +1,8 @@
 <template>
   <nav>
     <router-link to="/">Home</router-link> |
-    <router-link to="/firebase">FireBase</router-link>
+    <router-link to="/firebase">FireBase</router-link> |
+    <router-link to="/social">Social</router-link>
   </nav>
   <router-view/>
 </template>
