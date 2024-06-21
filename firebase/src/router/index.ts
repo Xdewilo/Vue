@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import HomeView from '@/views/HomeView.vue'
-import FireBase from '@/views/FireBase.vue'
+import HomeView from '@/views/HomeView.vue';
 import SocialView from '@/views/SocialView.vue';
+import FireBaseView from '@/views/FireBaseView.vue';
+import TwitterView from '@/views/TwitterView.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -12,13 +13,13 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/firebase',
     name: 'firebase',
-    component: FireBase
+    component: FireBaseView
   },
   {
     path: '/social',
     name: 'social',
     component : SocialView
-  }
+  },
   
 ]
 
