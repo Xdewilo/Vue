@@ -2,7 +2,8 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import HomeView from '@/views/HomeView.vue';
 import SocialView from '@/views/SocialView.vue';
 import FireBaseView from '@/views/FireBaseView.vue';
-import TwitterView from '@/views/TwitterView.vue';
+import AWSViews from '@/views/AWSViews.vue';
+
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -20,6 +21,11 @@ const routes: Array<RouteRecordRaw> = [
     name: 'social',
     component : SocialView
   },
+  {
+    path : '/aws',
+    name : 'aws',
+    component : AWSViews
+  }
   
 ]
 
