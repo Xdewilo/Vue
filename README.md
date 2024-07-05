@@ -1,1 +1,1 @@
-Course of Vue.js
+cusrso de vue de gogodev repo
