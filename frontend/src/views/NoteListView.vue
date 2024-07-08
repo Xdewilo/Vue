@@ -1,20 +1,33 @@
 <template>
-    <div>
-        
-        <h1>Notes</h1>
-        <ul>
-            <li>
-                <h2>Note 1</h2>
-                <p>Content 1</p>
-            </li>
-            <li>
-                <h2>Note 2</h2>
-                <p>Content 2</p>
-            </li>
-            <li>
-                <h2>Note 3</h2>
-                <p>Content 3</p>
-            </li>
-        </ul>
-    </div>
+  <div class="container">
+    <router-link :to="{name: 'create'}"><button class="btn btn-success">Create Note</button></router-link>
+    <table class="table" v-if="notes">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="note in notes" :key="note.id">
+          <th>{{ note.content }}</th>
+        </tr>
+      </tbody>
+    </table>
+    <p v-else> no data yet</p>
+  </div>
 </template>
+
+
+<script lang="ts" setup>
+import { onMounted, ref, Ref } from 'vue'
+import useAuth from '@/store/auth'
+import INote from '@/Interface/INote';
+
+
+const store = useAuth()
+const notes: Ref<Array<INote>> = ref([])
+onMounted(async () => {
+  notes.value = await store.getNotes()
+})
+</script>
