@@ -5,7 +5,7 @@
                 <label for="exampleInputEmail1" class="form-label">my note</label>
                 <input type="email" class="form-control" id="exampleInputEmail1" v-model="note" aria-describedby="emailHelp">
             </div>
-            <button type="submit" class="btn btn-primary" @click.prevent="sendNote">Submit</button>
+            <button type="submit" class="btn btn-primary"  @click.prevent="sendNote">Submit</button>
 
             <router-link :to="{ name: 'list' }"><button class="btn btn-danger">back list</button></router-link>
         </form>
@@ -14,6 +14,7 @@
 </template>
 
 <script lant="ts" setup>
+import router from '@/router';
 import useAuth from '@/store/auth';
 import { ref } from 'vue'
 
@@ -27,7 +28,7 @@ const sendNote = async() =>{
     if(data == false){
         message.value = 'Failed'
     }else{
-        message.value = 'Success'
+        router.push({ name: 'list' })
     }
 }
 

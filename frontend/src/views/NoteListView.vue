@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <router-link :to="{name: 'create'}"><button class="btn btn-success">Create Note</button></router-link>
-    <table class="table" v-if="notes">
+    <table class="table" v-if="notes.length > 0">
       <thead>
         <tr>
           <th scope="col">#</th>
@@ -10,6 +10,7 @@
       </thead>
       <tbody>
         <tr v-for="note in notes" :key="note.id">
+          <th>{{ note.id }}</th>
           <th>{{ note.content }}</th>
         </tr>
       </tbody>
@@ -27,6 +28,7 @@ import INote from '@/Interface/INote';
 
 const store = useAuth()
 const notes: Ref<Array<INote>> = ref([])
+
 onMounted(async () => {
   notes.value = await store.getNotes()
 })

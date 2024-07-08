@@ -80,7 +80,7 @@ const useAuth = defineStore('aunth', {
                 headers: {
                     'Content-Type': 'application/json',
                     'Accept': 'application/json',
-                    'Auntozation': `Bearer ${this.token}`
+                    'Authorization': `Bearer ${this.token}`
                 },
 
                 body: JSON.stringify({
@@ -92,6 +92,7 @@ const useAuth = defineStore('aunth', {
             if(response.status === false){
                 return false
             }else{
+                this.token = response.token
                 return true
             }
             
