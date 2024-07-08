@@ -1,8 +1,8 @@
-<template >
-  <div>
-        <h1>Login</h1>
+<template>
+    <div>
+        <h1>Register</h1>
         <input type="text" placeholder="Username" />
         <input type="password" placeholder="Password" />
-        <button>Login</button>
-  </div>
+        <button>Register</button>
+    </div>
 </template>
