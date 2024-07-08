@@ -1,9 +1,10 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import LoginView from '@/views/LoginView.vue'
-import NoteListView from '@/views/NoteListView.vue'
 import NoteCreateView from '@/views/NoteCreateView.vue'
-import RegisterViews from '@/views/ReguisterViews.vue'
+import NoteListView from '@/views/NoteListView.vue'
+import RegisterViews from '@/views/RegisterViews.vue'
 import useAuth from '@/store/auth'
+
 
 const routes: Array<RouteRecordRaw> = [
   {
