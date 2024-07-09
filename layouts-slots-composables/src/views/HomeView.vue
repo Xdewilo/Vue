@@ -1,18 +1,19 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
-  </div>
+  <MainLayout>
+    <template #main>
+      <h5>Main content</h5>
+    </template>
+
+    <template #aux>
+      <h5>Aux content</h5>
+      <p>x : {{ x }} en y {{ y }}</p>
+    </template>
+  </MainLayout>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+<script lang="ts" setup>
+import { useMouse } from '@/composables/UseMouse';
+import MainLayout from '@/layout/MainLayout.vue';
 
-export default defineComponent({
-  name: 'HomeView',
-  components: {
-    HelloWorld,
-  },
-});
+const { x, y } = useMouse();
 </script>
