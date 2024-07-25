@@ -3,22 +3,17 @@
   <input type="text" placeholder="Digite note" v-model="note">
 </template>
 <script lang="ts">
-import { defineComponent } from 'vue'
-import { ref } from 'vue'
+import { defineComponent, ref, watchEffect } from 'vue'
 export default defineComponent({
-  data(){
-    return {
-        note :''
-    }
-  },
-    watch:{
-        note(newVal, oldVal){
-        alert("Valor nuevo ==>"+ newVal + "Valor antiguao ===>" +oldVal)
-        localStorage.setItem('note', newVal)
-        }
-    }
-})
+  setup(){
+    const note = ref("")
+    watchEffect(() => alert("Se ha modificado el valor: "+ note.value))
 
+    return{
+      note
+    }
+  }
+})
 </script>
 <style scoped>
   
