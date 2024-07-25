@@ -1,5 +1,8 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
+import lazyLoad from 'vue3-lazyload'
 
-createApp(App).use(router).mount('#app')
+const app = createApp(App)
+.use(lazyLoad, {})
+.use(router).mount('#app')
